@@ -1,24 +1,17 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Oct 28 15:39:10 2025
-
-@author: HP
-"""
 
 
 # app.py
 import io
 import requests
 from urllib.parse import quote_plus
-
 import streamlit as st
-
 from rdkit import Chem
 from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
 
 
-# ---------- Core logic (reuses your code) ----------
+# 1) ChEMBL API 
 
 def get_smiles_from_chembl(name: str):
     """Return SMILES from ChEMBL (or None if no match)."""
@@ -40,7 +33,11 @@ def get_smiles_from_chembl(name: str):
         return None
     except Exception:
         return None
-
+    
+    
+    
+    
+# 2) SMILES to mol
 
 def smiles_to_mol(smiles: str):
     """Convert a SMILES string to an RDKit Mol (or None on failure)."""
@@ -53,6 +50,11 @@ def smiles_to_mol(smiles: str):
     AllChem.Compute2DCoords(mol)
     return mol
 
+
+
+
+
+# 3) Gnerate image
 
 def mol_to_png_bytes(mol, legend: str = "", size=(1200, 800)) -> bytes:
     """Draw Mol (transparent background, black atoms) and return PNG bytes."""
@@ -68,7 +70,7 @@ def mol_to_png_bytes(mol, legend: str = "", size=(1200, 800)) -> bytes:
     return drawer.GetDrawingText()  # PNG bytes
 
 
-# ---------- Streamlit UI ----------
+# 4) Streamlit UI 
 
 st.set_page_config(page_title="Quickly draw molecules", page_icon="⌬", layout="centered")
 
