@@ -44,7 +44,7 @@ draw-molecules-and-chemical-compounds/
 
 ## 🌐 Live Demo
 
-👉 ]Open the app on Streamlit Cloud](https://draw-molecules.streamlit.app)
+👉 [Open the app on Streamlit Cloud](https://draw-molecules.streamlit.app)
 
 
 ## 👩‍💻 Contact
