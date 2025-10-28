@@ -1,0 +1,5 @@
+streamlit
+requests
+rdkit-pypi
+pillow
+cairocffi
