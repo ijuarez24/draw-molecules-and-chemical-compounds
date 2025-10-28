@@ -27,7 +27,9 @@ The goal of this project is to provide an intuitive interface for chemists, stud
 ```
 
 draw-molecules-and-chemical-compounds/
-├── app.py
+├──images
+| ├── app_preview.png
+├──app.py
 ├── environment.yml
 ├── requirements.txt
 └── README.md
