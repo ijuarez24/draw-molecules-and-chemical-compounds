@@ -1,0 +1,13 @@
+name: rdkit-env
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - rdkit=2022.09.5
+  - cairo
+  - pango
+  - pip
+  - pip:
+      - streamlit
+      - requests
+      - pillow
